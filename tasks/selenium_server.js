@@ -90,7 +90,7 @@ module.exports = function (grunt) {
     childProcesses[target] = spawn('java', args);
 
     var pid = childProcesses[target].pid;
-    grunt.log.ok('Boom, got it. pid is ' + pid + ' in case you give a shit.');
+    grunt.log.ok('Boom, got it. pid is ' + pid);
 
     cb(null);
   }
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
 
     // Set default options.
     var options = this.options({
-      downloadUrl: 'https://selenium.googlecode.com/files/selenium-server-standalone-2.37.0.jar',
+      downloadUrl: 'http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar',
       downloadLocation: '/tmp',
       serverOptions: {}
     });
