@@ -75,7 +75,7 @@ module.exports = function (grunt) {
    * @param  {Function} cb
    */
   function startServer (target, jar, options, cb) {
-    var args = ['-jar', jar];
+    var args = ['-jar', jar, '-role', 'webdriver'];
 
     // Add additional options to command.
     Object.keys(options.serverOptions).forEach(function (key) {
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
 
     // Set default options.
     var options = this.options({
-      downloadUrl: 'http://selenium-release.storage.googleapis.com/2.41/selenium-server-standalone-2.41.0.jar',
+      downloadUrl: 'http://selenium-release.storage.googleapis.com/2.42/selenium-server-standalone-2.42.0.jar',
       downloadLocation: '/tmp',
       serverOptions: {}
     });
